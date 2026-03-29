@@ -2,6 +2,9 @@ FROM python:3.10-slim
 
 WORKDIR /app
 
+# Copy all the files from GitHub into the Docker image
+COPY . /app
+
 # Install both Pillow and Flask
 RUN pip install --no-cache-dir Pillow Flask
 
